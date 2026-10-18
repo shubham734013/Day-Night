@@ -17,7 +17,7 @@
 ### Phase 0 — Repository and product baseline
 | ID | Task | Priority | Status | Acceptance / evidence |
 |---|---|---:|---|---|
-| P0-001 | Audit repository structure, manifests, scripts and current implementation | P0 | Not started | Document actual stack and scripts; record commit SHA |
+| P0-001 | Audit repository structure, manifests, scripts and current implementation | P0 | Done (remote-tree audit) | [REPOSITORY_AUDIT.md](./REPOSITORY_AUDIT.md); base commit `b7007cc8d90194675f602b95f948d302ae65b138`; audit commit `af545e77f0e9c798eb335bb215257e0bcf5667c8`. Runtime checks remain unavailable because no application source/manifests were found. |
 | P0-002 | Reconcile code with single-gym scope and four portals | P0 | Not started | No unapproved multi-tenant/platform surface |
 | P0-003 | Establish CI checks: typecheck, lint, tests, build | P0 | Not started | Required checks and exact run links recorded |
 | P0-004 | Document environment variables and safe local setup | P0 | Not started | `.env.example` only; no real secrets |
@@ -111,7 +111,7 @@ A release must not proceed until:
 
 ## 4. Current blockers / decisions to resolve
 
-1. Confirm the actual repository stack and existing implementation before coding to the proposed architecture.
+1. Select and scaffold the initial stack after the remote-tree audit; the technology stack in `Architecture.md` remains proposed, not implemented or runtime-verified.
 2. Choose and verify the payment gateway, fee structure, settlement behavior, and supported payment methods.
 3. Define membership pause/freeze, refund, discount, and override rules.
 4. Confirm gym timezone and business-day boundaries.
